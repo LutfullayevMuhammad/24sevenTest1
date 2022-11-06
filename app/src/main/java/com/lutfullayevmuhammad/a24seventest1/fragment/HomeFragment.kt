@@ -1,13 +1,13 @@
-package com.lutfullayevmuhammad.a24seventest1
+package com.lutfullayevmuhammad.a24seventest1.fragment
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.lutfullayevmuhammad.a24seventest1.databinding.FragmentHomeBinding
+import com.lutfullayevmuhammad.a24seventest1.fragment.base.BaseFragment
 
-class HomeFragment:BaseFragment() {
+class HomeFragment: BaseFragment() {
 
     lateinit var binding:FragmentHomeBinding
 
@@ -17,6 +17,11 @@ class HomeFragment:BaseFragment() {
     }
 
     override fun onFragmentReady() {
+        binding.profilBtn.setOnClickListener {
+            val action =
+                HomeFragmentDirections.actionHomeFragmentToDetailsFragment()
+            findNavController().navigate(action)
+        }
 
     }
 

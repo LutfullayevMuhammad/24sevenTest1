@@ -1,4 +1,4 @@
-package com.lutfullayevmuhammad.a24seventest1
+package com.lutfullayevmuhammad.a24seventest1.fragment.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
